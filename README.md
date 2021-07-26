@@ -16,9 +16,14 @@ This app uses the [JSON Placeholder](https://jsonplaceholder.typicode.com/) serv
 
 ### QUESTIONS
 
-- useQuery
-  - isFetching
-  - isLoading
+- useQuery => 3 time if request is files (by default retries) => but configurable!
+  - isFetching;
+  - isLoading;
   - stale => staleTime
-    - staleTime => it's for re-fetching
-    - cacheTime => 5min by default
+    - staleTime => it's for re-fetching;
+    - cacheTime => 5min by default;
+    - isFetching;
+- useMutation => no retries by default if is no fetched (post/delete/update)
+  - iddLoading no isFetching
+  - isError
+  - isSuccess
